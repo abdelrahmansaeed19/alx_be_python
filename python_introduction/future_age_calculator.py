@@ -1,0 +1,1 @@
+print(f"In 2050, you will be {int(input('Enter your current age: ')) + 27} years old.")
