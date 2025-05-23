@@ -4,7 +4,7 @@ import pyodbc
 
 conn = pyodbc.connect(
     'DRIVER={ODBC Driver 18 for SQL Server};'
-    'SERVER=localhost,1433;'  # Replace with your IP or hostname
+    'SERVER=localhost,1433;'  
     'DATABASE=AirBnB_Clone;'
     'UID=sa;'
     'PWD=20252025aS@;'
@@ -25,7 +25,7 @@ def log_queries(func):
 
 @log_queries
 def fetch_all_users(query):
-    #conn = sqlite3.connect('AirBnB_Clone.db')
+    conn = sqlite3.connect('AirBnB_Clone.db')
     cursor = conn.cursor()
     cursor.execute(query)
     results = cursor.fetchall()
@@ -34,5 +34,3 @@ def fetch_all_users(query):
 
 #### fetch users while logging the query
 users = fetch_all_users(query="SELECT * FROM users")
-
-#print(users)
