@@ -26,7 +26,7 @@ while pirority_error:
 
 reminder_message = ""
 
-#high['\"]\s*;
+# high['\"]\s*;
 
 while time_bound_error:
     try:
