@@ -51,12 +51,11 @@ match priority:
 
 time_bound_message = ""
 
-match time_bound:
-    case "yes":
-        time_bound_message = " that requires immediate attention today!"
-        reminder_message = "Reminder"
-    case "no":
-        time_bound_message = ". Consider completing it when you have free time."
-        reminder_message = "Note"
+if time_bound == "yes":
+    time_bound_message = " that requires immediate attention today!"
+    reminder_message = "Reminder"
+else:
+    time_bound_message = ". Consider completing it when you have free time."
+    reminder_message = "Note"
 
 print(f"{reminder_message}: '{task}' is {priority_message}{time_bound_message}")
