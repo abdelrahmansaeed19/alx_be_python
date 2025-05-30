@@ -15,7 +15,7 @@ while second_num_error:
 operation_error = True
 while operation_error:
     try:
-        operation = input("Enter the operation (+, -, *, /): ").strip()
+        operation = input("Choose the operation (+, -, *, /): ").strip()
         if operation not in ['+', '-', '*', '/']:
             raise ValueError("Invalid operation. Please enter one of +, -, *, /.")
         operation_error = False
