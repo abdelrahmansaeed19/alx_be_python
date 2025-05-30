@@ -1,7 +1,7 @@
 num_error = False
 while not num_error:
     try:
-        number = int(input("Enter a number to generate its multiplication table: "))
+        number = int(input("Enter a number to see its multiplication table:"))
         if number < 0:
             raise ValueError
         num_error = True
