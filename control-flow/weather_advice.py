@@ -2,7 +2,7 @@ NotStringInputError = True
 
 while NotStringInputError:
     try:
-        weather = input("Enter the current weather (sunny, rainy, snowy): ").strip().lower()
+        weather = input("What's the weather like today? (sunny/rainy/cold):").strip().lower()
         if not isinstance(weather, str):
             raise ValueError("Input must be a string.")
         NotStringInputError = False
