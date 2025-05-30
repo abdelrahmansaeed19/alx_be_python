@@ -37,6 +37,18 @@ while time_bound_error:
     except ValueError as e:
         print(e)
 
+priority_message = ""
+
+match priority:
+    case "high":
+        priority_message = "a high priority task"
+    case "medium":
+        priority_message = "a medium priority task"
+    case "low":
+        priority_message = "a low priority task"
+    case _:
+        priority_message = "an Unknown priority task"
+
 time_bound_message = ""
 
 match time_bound:
@@ -47,4 +59,4 @@ match time_bound:
         time_bound_message = ". Consider completing it when you have free time."
         reminder_message = "Note"
 
-print(f"{reminder_message}: '{task}' is a {priority} priority task{time_bound_message}")
+print(f"{reminder_message}: '{task}' is {priority_message}{time_bound_message}")
