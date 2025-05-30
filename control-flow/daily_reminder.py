@@ -17,7 +17,7 @@ while task_error:
 
 while pirority_error:
     try:
-        priority = input("Enter the priority of the task (high, medium, low): ").lower()
+        priority = input("Priority (high/medium/low): ").lower()
         if priority not in ['high', 'medium', 'low']:
             raise ValueError("Priority must be high, medium, or low.")
         pirority_error = False
