@@ -26,6 +26,8 @@ while pirority_error:
 
 reminder_message = ""
 
+#high['\"]\s*;
+
 while time_bound_error:
     try:
         time_bound = input("Is it time-bound? (yes/no): ")
