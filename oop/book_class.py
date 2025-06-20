@@ -26,29 +26,3 @@ class Book:
     
     def __del__(self):
         print(f"Deleting {self.title}")
-
-""""
-- [Got]
-Deleting 1984
-
-(14 chars long)
-[stderr]: Traceback (most recent call last):
-  File "main.py", line 17, in <module>
-    main()
-  File "main.py", line 8, in main
-    print(my_book)  # Expected to use __str__
-  File "/tmp/correction/6030073846597538746600292581665252316563_5/100940/1264650/oop/book_class.py", line 14, in __str__
-    return f"{self.title} by {self.author}, published in {self.published_year}"
-AttributeError: 'Book' object has no attribute 'published_year'
-
-(431 chars long)
-[Expected]
-1984 by George Orwell, published in 1949
-Book('1984', 'George Orwell', 1949)
-Deleting 1984
-
-(91 chars long)
-[stderr]: [Anything]
-(0 chars long)
-
-"""
