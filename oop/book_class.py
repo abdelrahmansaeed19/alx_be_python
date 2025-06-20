@@ -6,7 +6,7 @@ class Book:
             raise TypeError("Published year and pages must be integers")
         if year < 0:
             raise ValueError("Published year must be non-negative and pages must be positive")
-        self.published_year = year
+        self.year = year
         self.title = title
         self.author = author
 
